@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'package:universal_io/io.dart';
+import 'dart:io';
 
 import 'classes/feature_collection.dart';
 import 'classes/feature.dart';
-
+import 'package:flutter/services.dart' show rootBundle; 
 /// The abstract class of GeoJSON
 abstract class GeoJSON {
   /// The GeoJSON file path
@@ -76,7 +76,7 @@ class _GeoJSON implements GeoJSON {
       return geoJSON;
     } else {
       /// Read file as string
-      await file.readAsString().then((data) async {
+     await rootBundle.loadString(path).then((data) async{
         var json = jsonDecode(data);
         if (data != null) {
           String type = json['type'];

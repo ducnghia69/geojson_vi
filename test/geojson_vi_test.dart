@@ -1,16 +1,16 @@
-import 'package:geojson_vi/geojson_vi.dart';
-import 'package:test/test.dart';
+// import 'package:geojson_vi/geojson_vi.dart';
+// import 'package:test/test.dart';
 
-void main() {
-  group('A group of tests', () {
-    final geoJSON = GeoJSON.create('example/data/new.geojson');
+// void main() {
+//   group('A group of tests', () {
+//     final geoJSON = GeoJSON.create('example/data/new.geojson');
 
-    setUp(() {
-      geoJSON.save();
-    });
+//     setUp(() {
+//       geoJSON.save();
+//     });
 
-    test('First Test', () {
-      expect(geoJSON.featureCollection.features.isEmpty, isTrue);
-    });
-  });
-}
+//     test('First Test', () {
+//       expect(geoJSON.featureCollection.features.isEmpty, isTrue);
+//     });
+//   });
+// }
